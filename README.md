@@ -25,7 +25,7 @@ Before running the project, ensure you have the following installed:
 #### Backend Environment:
 Create a `.env` file in the `backend/` directory with your database credentials:
 
-```bash
+bash
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
 POSTGRES_USER=your_db_user
@@ -37,8 +37,6 @@ POSTGRES_DB=your_db_name``
 ### ⚙️ Installation
 
 bash
-
-Copy code
 
 `# Clone the repository
 $ git clone https://github.com/Guts996/test-typeOrm.git
