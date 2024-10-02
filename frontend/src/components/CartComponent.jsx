@@ -156,10 +156,6 @@ const CartComponent = ({ cart, setCart }) => {
               </Item>
             ))}
           </ItemsList>
-          <TotalSection>
-            <p>Total Before Discount: {cart.totalBeforeDiscount} DZD</p>
-            <p>Total After Discount: {cart.totalAfterDiscount} DZD</p>
-          </TotalSection>
 
           {cart.appliedPromotions.length > 0 && (
             <>
@@ -180,6 +176,10 @@ const CartComponent = ({ cart, setCart }) => {
               </PromotionsList>
             </>
           )}
+          <TotalSection>
+            <p>Total Before Discount: {cart.totalBeforeDiscount} DZD</p>
+            <p>Total After Discount: {cart.totalAfterDiscount} DZD</p>
+          </TotalSection>
         </>
       ) : (
         <p>The cart is currently empty.</p>
