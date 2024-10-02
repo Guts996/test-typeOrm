@@ -25,7 +25,7 @@ async function populateDatabase(
     }
   }
 
-  // Load products.json
+
   const products = dummyProducts;
 
   for (const productData of products) {

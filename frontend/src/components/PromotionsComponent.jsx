@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// Main container for the promotions section
+
 const Section = styled.section`
   max-width: 100%;
 
@@ -16,14 +16,14 @@ const Section = styled.section`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
 
-// Styled list for promotions
+
 const PromotionList = styled.ul`
   list-style-type: none;
   padding: 0;
   width: 100%;
 `;
 
-// Styled list item for individual promotions
+
 const PromotionItem = styled.li`
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ const PromotionItem = styled.li`
   align-items: center;
 `;
 
-// Styled button for applying promotions
+
 const ApplyButton = styled.button`
   background-color: #28a745;
   color: white;
@@ -47,14 +47,14 @@ const ApplyButton = styled.button`
 `;
 
 const PromotionsComponent = ({ promotions, cart, setCart }) => {
-  // Apply promotion to the cart
+
   const applyPromotionToCart = async (promotionId) => {
     if (!cart || !cart.user || !cart.user.id) {
       console.error("Cart or User data is missing.");
       return;
     }
 
-    const userId = cart.user.id; // Use the user id from the cart safely
+    const userId = cart.user.id; 
 
     try {
       const response = await fetch(
@@ -78,7 +78,7 @@ const PromotionsComponent = ({ promotions, cart, setCart }) => {
     }
   };
 
-  // Check if promotions are available
+
   if (!promotions || promotions.length === 0) {
     return <p>No available promotions at the moment.</p>;
   }

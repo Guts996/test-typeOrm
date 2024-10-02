@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// Main container for the products section
 const Section = styled.section`
   max-width: 100%;
   border-radius: 8px;
@@ -66,7 +65,6 @@ const ProductsComponent = ({ products, cart, setCart }) => {
     }
   };
 
-  // Handle empty or unavailable products list
   if (!products || products.length === 0) {
     return <p>No products available at the moment.</p>;
   }

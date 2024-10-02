@@ -1,7 +1,6 @@
 export const dummyPromotions = [
   {
     id: 1,
-
     name: '500 DZD off Football Items',
     description: 'Flat discount for Football category products',
     category: 'Football',

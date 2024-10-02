@@ -93,7 +93,7 @@ export const calculateCartTotals = (
 };
 
 const applyDiscount = (promotion: Promotion, item: CartItem) => {
-  // Ensure all discount values are numbers
+
   const flatDiscount =
     typeof promotion.flatDiscountValue === 'number'
       ? promotion.flatDiscountValue
@@ -104,16 +104,16 @@ const applyDiscount = (promotion: Promotion, item: CartItem) => {
       ? promotion.discountPercentageValue
       : parseFloat(promotion.discountPercentageValue) || 0;
 
-  // Apply flat discount first, if applicable
+
   if (flatDiscount > 0) {
     item.discountedPrice -= flatDiscount;
   }
 
-  // Apply percentage discount on the updated discounted price
+
   if (discountPercentage > 0) {
     item.discountedPrice -= (item.discountedPrice * discountPercentage) / 100;
   }
 
-  // Ensure the discounted price is not less than zero
+
   item.discountedPrice = Math.max(item.discountedPrice, 0);
 };

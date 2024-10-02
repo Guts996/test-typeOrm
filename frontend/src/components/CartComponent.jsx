@@ -76,7 +76,7 @@ const PromotionItem = styled.li`
 `;
 
 const CartComponent = ({ cart, setCart }) => {
-  // Function to remove an item from the cart
+
   const removeItemFromCart = async (itemId) => {
     const userId = cart.user.id;
     try {
@@ -101,7 +101,7 @@ const CartComponent = ({ cart, setCart }) => {
     }
   };
 
-  // Function to remove an applied promotion from the cart
+
   const removePromotionFromCart = async (promotionId) => {
     const userId = cart.user.id;
     try {

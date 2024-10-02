@@ -9,7 +9,7 @@ export class HealthController {
   @Get()
   async checkHealth() {
     try {
-      // Check if the database is connected
+
       await this.connection.query('SELECT 1');
       return { status: 'ok', database: 'connected' };
     } catch (error) {
